@@ -1,0 +1,7 @@
+#surefire
+#Sat Feb 22 13:49:02 FET 2014
+maven.ext.class.path=C\:\\Program Files\\NetBeans 7.4\\java\\maven-nblib\\netbeans-eventspy.jar
+user.dir=C\:\\proj\\ContactManager
+localRepository=C\:\\Users\\Margarita\\.m2\\repository
+netbeans.deploy=true
+basedir=C\:\\proj\\ContactManager
