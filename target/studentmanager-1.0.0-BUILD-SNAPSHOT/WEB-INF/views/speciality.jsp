@@ -40,7 +40,7 @@
                                             <spring:message code="label.speciality" />
                                         </form:label></td>
                                     <td><form:input path="speciality" /></td> 
-                                    <td><span class="error" id="telephoneerror" /></td>
+                                   <td><span class="error" id="specialityerror" /></td>
                                 </tr>
 
                                 <tr>
