@@ -1,63 +1,27 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package ua.hneu.student.domain;
 
 import java.util.Set;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "Groups")
-public class Group {
+public interface Group {
 
-    @Id
-    @Column(name = "groupId")
-    @GeneratedValue
-    private Integer groupId;
+    public Integer getGroupId();
 
-    @Column(name = "groupName")
-    private String groupName;
+    public void setGroupId(Integer groupId);
 
-    @ManyToOne
-    @JoinColumn(name = "specialityId")
-    Speciality speciality;
+    public String getGroupName();
 
-    @OneToMany(mappedBy = "group")
-    private Set<Student> student;
+    public void setGroupName(String groupName);
 
-    public Integer getGroupId() {
-        return groupId;
-    }
+    public SpecialityImpl getSpeciality();
 
-    public void setGroupId(Integer groupId) {
-        this.groupId = groupId;
-    }
+    public void setSpeciality(SpecialityImpl speciality);
 
-    public String getGroupName() {
-        return groupName;
-    }
+    public Set<StudentImpl> getStudent();
 
-    public void setGroupName(String groupName) {
-        this.groupName = groupName;
-    }
-
-    public Speciality getSpeciality() {
-        return speciality;
-    }
-
-    public void setSpeciality(Speciality speciality) {
-        this.speciality = speciality;
-    }
-
-    public Set<Student> getStudent() {
-        return student;
-    }
-
-    public void setStudent(Set<Student> student) {
-        this.student = student;
-    }
+    public void setStudent(Set<StudentImpl> student);
 }

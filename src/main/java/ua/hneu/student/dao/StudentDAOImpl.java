@@ -2,7 +2,7 @@ package ua.hneu.student.dao;
 
 import java.util.List;
 
-import ua.hneu.student.domain.Student;
+import ua.hneu.student.domain.StudentImpl;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,20 +14,20 @@ public class StudentDAOImpl implements StudentDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
-    public void addStudent(Student student) {
+    public void addStudent(StudentImpl student) {
         sessionFactory.getCurrentSession().save(student);
     }
 
     @SuppressWarnings("unchecked")
-    public List<Student> listStudent() {
+    public List<StudentImpl> listStudent() {
 
-        return sessionFactory.getCurrentSession().createQuery("from Student")
+        return sessionFactory.getCurrentSession().createQuery("from StudentImpl")
                 .list();
     }
 
     public void removeStudent(Integer id) {
-        Student student = (Student) sessionFactory.getCurrentSession().load(
-                Student.class, id);
+        StudentImpl student = (StudentImpl) sessionFactory.getCurrentSession().load(
+                StudentImpl.class, id);
         if (null != student) {
             sessionFactory.getCurrentSession().delete(student);
         }

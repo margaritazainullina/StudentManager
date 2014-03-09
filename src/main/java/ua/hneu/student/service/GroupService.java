@@ -1,13 +1,13 @@
 package ua.hneu.student.service;
 
 import java.util.List;
-import ua.hneu.student.domain.Group;
+import ua.hneu.student.domain.GroupImpl;
 
 public interface GroupService {
 
-	public void addGroup(Group s);
+	public void addGroup(GroupImpl s);
 
-	public List<Group> listGroup();
+	public List<GroupImpl> listGroup();
 
 	public void removeGroup(Integer id);
 }

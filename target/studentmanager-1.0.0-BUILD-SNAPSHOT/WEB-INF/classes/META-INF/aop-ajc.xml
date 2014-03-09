@@ -1,5 +1,6 @@
 <aspectj>
 <aspects>
+<aspect name="ua.hneu.student.aspect.LoggingAspect"/>
 </aspects>
 </aspectj>
 

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
  
 import ua.hneu.student.dao.StudentDAO;
-import ua.hneu.student.domain.Student;
+import ua.hneu.student.domain.StudentImpl;
  
 @Service
 public class StudentServiceImpl implements StudentService {
@@ -16,13 +16,12 @@ public class StudentServiceImpl implements StudentService {
     private StudentDAO studentDAO;
  
     @Transactional
-    public void addStudent(Student student) {
+    public void addStudent(StudentImpl student) {
         studentDAO.addStudent(student);
     }
  
     @Transactional
-    public List<Student> listStudent() {
- 
+    public List<StudentImpl> listStudent() { 
         return studentDAO.listStudent();
     }
  

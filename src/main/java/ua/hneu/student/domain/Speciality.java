@@ -1,52 +1,19 @@
 package ua.hneu.student.domain;
 
 import java.util.Set;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "SPECIALITIES")
-public class Speciality {
+public interface Speciality {
 
-    @Id
-    @Column(name = "specialityId")
-    @GeneratedValue
-    private Integer specialityId;
+    public Integer getSpecialityId();
 
-    @Column(name = "SPECIALITY")
-    private String speciality;
+    public void setspecialityId(Integer specialityId);
 
-    @OneToMany(mappedBy = "speciality")
-    private Set<Group> groups;
+    public String getSpeciality();
 
-    
-    public Integer getSpecialityId() {
-        return specialityId;
-    }
+    public void setSpeciality(String speciality);
 
-    public void setspecialityId(Integer specialityId) {
-        this.specialityId = specialityId;
-    }
+    public Set<GroupImpl> getGroups();
 
-    public String getSpeciality() {
-        return speciality;
-    }
+    public void setGroups(Set<GroupImpl> groups);
 
-    public void setSpeciality(String speciality) {
-        this.speciality = speciality;
-    }
-
-    public Set<Group> getGroups() {
-        return groups;
-    }
-
-    public void setGroups(Set<Group> groups) {
-        this.groups = groups;
-    }
-
-   
 }

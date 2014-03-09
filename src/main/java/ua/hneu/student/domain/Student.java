@@ -1,96 +1,35 @@
 package ua.hneu.student.domain;
 
 import java.util.Set;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "STUDENTS")
-public class Student {
+public interface Student {
 
-    @Id
-    @Column(name = "studentId")
-    @GeneratedValue
-    private Integer studentId;
+    public Integer getStudentId();
 
-    @Column(name = "FIRSTNAME")
-    private String firstname;
+    public void setStudentId(Integer studentId);
 
-    @Column(name = "LASTNAME")
-    private String lastname;
+    public String getFirstname();
 
-    @Column(name = "EMAIL")
-    private String email;
+    public void setFirstname(String firstname);
 
-    @Column(name = "TELEPHONE")
-    private String telephone;
+    public String getLastname();
 
-    @Column(name = "ABOUT")
-    private String about;
+    public void setLastname(String lastname);
 
-    @ManyToOne
-    @JoinColumn(name = "groupId")
-    Group group;
+    public String getEmail();
 
-    public Integer getStudentId() {
-        return studentId;
-    }
+    public void setEmail(String email);
 
-    public void setStudentId(Integer studentId) {
-        this.studentId = studentId;
-    }
+    public String getTelephone();
 
-    public String getFirstname() {
-        return firstname;
-    }
+    public void setTelephone(String telephone);
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
+    public String getAbout();
 
-    public String getLastname() {
-        return lastname;
-    }
+    public void setAbout(String about);
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
+    public GroupImpl getGroup();
 
-    public String getEmail() {
-        return email;
-    }
+    public void setGroup(GroupImpl group);
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
-    }
-
-    public String getAbout() {
-        return about;
-    }
-
-    public void setAbout(String about) {
-        this.about = about;
-    }
-
-     public Group getGroup() {
-        return group;
-    }
-
-    public void setGroup(Group group) {
-        this.group = group;
-    }
-    
 }

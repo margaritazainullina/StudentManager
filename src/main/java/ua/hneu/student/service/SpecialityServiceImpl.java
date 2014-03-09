@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ua.hneu.student.dao.SpecialityDAO;
-import ua.hneu.student.domain.Speciality;
+import ua.hneu.student.domain.SpecialityImpl;
 
 @Service
 public class SpecialityServiceImpl implements SpecialityService {
@@ -15,12 +15,12 @@ public class SpecialityServiceImpl implements SpecialityService {
     private SpecialityDAO specialityDAO;
 
     @Transactional
-    public void addSpeciality(Speciality speciality) {
+    public void addSpeciality(SpecialityImpl speciality) {
         specialityDAO.addSpeciality(speciality);
     }
 
     @Transactional
-    public List<Speciality> listSpeciality() {
+    public List<SpecialityImpl> listSpeciality() {
 
         return specialityDAO.listSpeciality();
     }

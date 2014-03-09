@@ -3,17 +3,21 @@ package ua.hneu.student.web;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import ua.hneu.student.domain.Group;
+import ua.hneu.student.domain.GroupImpl;
 import ua.hneu.student.service.GroupService;
 
 @Controller
 public class GroupController {
+
+    ApplicationContext appContext = new ClassPathXmlApplicationContext("springAOP.xml");
 
     @Autowired
     private GroupService groupService;
@@ -21,7 +25,8 @@ public class GroupController {
     @RequestMapping("/group")
     public String listGroups(Map<String, Object> map) {
 
-        map.put("group", new Group());
+        GroupImpl g = (GroupImpl) appContext.getBean("group");
+        map.put("group", g);
         map.put("groupList", groupService.listGroup());
 
         return "group";
@@ -33,7 +38,7 @@ public class GroupController {
     }
 
     @RequestMapping(value = "/add/group", method = RequestMethod.POST)
-    public String addSpeciality(@ModelAttribute("group") Group group,
+    public String addSpeciality(@ModelAttribute("group") GroupImpl group,
             BindingResult result) {
 
         groupService.addGroup(group);

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ua.hneu.student.dao.GroupDAO;
  
-import ua.hneu.student.domain.Group;
+import ua.hneu.student.domain.GroupImpl;
  
 @Service
 public class GroupServiceImpl implements GroupService {
@@ -16,12 +16,12 @@ public class GroupServiceImpl implements GroupService {
     private GroupDAO groupDAO;
  
     @Transactional
-    public void addGroup(Group group) {
+    public void addGroup(GroupImpl group) {
         groupDAO.addGroup(group);
     }
  
     @Transactional
-    public List<Group> listGroup() {
+    public List<GroupImpl> listGroup() {
  
         return groupDAO.listGroup();
     }

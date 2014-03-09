@@ -5,8 +5,8 @@
 
 <hibernate-configuration>
     <session-factory>
-        <mapping class="ua.hneu.student.domain.Student" />
-        <mapping class="ua.hneu.student.domain.Speciality" />
-        <mapping class="ua.hneu.student.domain.Group" />
+        <mapping class="ua.hneu.student.domain.StudentImpl" />
+        <mapping class="ua.hneu.student.domain.SpecialityImpl" />
+        <mapping class="ua.hneu.student.domain.GroupImpl" />
     </session-factory>
 </hibernate-configuration>

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import ua.hneu.student.domain.Speciality;
+import ua.hneu.student.domain.SpecialityImpl;
 import ua.hneu.student.service.SpecialityService;
 
 @Controller
@@ -21,7 +22,7 @@ public class SpecialityController {
     @RequestMapping("/speciality")
     public String listSpecialities(Map<String, Object> map) {
 
-        map.put("speciality", new Speciality());
+        map.put("speciality", new SpecialityImpl());
         map.put("specialityList", specialityService.listSpeciality());
 
         return "speciality";
@@ -33,7 +34,7 @@ public class SpecialityController {
     }
 
     @RequestMapping(value = "/add/speciality", method = RequestMethod.POST)
-    public String addSpeciality(@ModelAttribute("speciality") Speciality speciality,
+    public String addSpeciality(@ModelAttribute("speciality") SpecialityImpl speciality,
             BindingResult result) {
 
         specialityService.addSpeciality(speciality);
