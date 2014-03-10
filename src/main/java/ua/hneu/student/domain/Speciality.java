@@ -6,7 +6,7 @@ public interface Speciality {
 
     public Integer getSpecialityId();
 
-    public void setspecialityId(Integer specialityId);
+    public void setSpecialityId(Integer specialityId);
 
     public String getSpeciality();
 

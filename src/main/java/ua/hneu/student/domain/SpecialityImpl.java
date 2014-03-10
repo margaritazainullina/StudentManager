@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "SPECIALITIES")
-public class SpecialityImpl implements Speciality{
+public class SpecialityImpl implements Speciality {
 
     @Id
     @Column(name = "specialityId")
@@ -23,13 +23,16 @@ public class SpecialityImpl implements Speciality{
     @OneToMany(mappedBy = "speciality")
     private Set<GroupImpl> groups;
 
-    
     public Integer getSpecialityId() {
         return specialityId;
     }
 
-    public void setspecialityId(Integer specialityId) {
-        this.specialityId = specialityId;
+    public void setSpecialityId(Integer specialityId) {
+        if (specialityId == null) {
+            throw new IllegalArgumentException();
+        } else {
+            this.specialityId = specialityId;
+        }
     }
 
     public String getSpeciality() {
@@ -48,5 +51,4 @@ public class SpecialityImpl implements Speciality{
         this.groups = groups;
     }
 
-   
 }
