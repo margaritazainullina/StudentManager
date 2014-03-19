@@ -106,7 +106,7 @@
                             </table>
                         </c:if>
                     </div>
-                </div>                
+                </div>
             </div>
             <div id="footer">HNEU</div>
         </div>
