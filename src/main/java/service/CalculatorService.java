@@ -31,8 +31,8 @@ public class CalculatorService {
         return a + b;
     }
 
-    @WebMethod(operationName = "divide")
-    public double divide(@WebParam(name = "a") double a, @WebParam(name = "b") double b) {
+    @WebMethod(operationName = "dividedouble")
+    public double dividedouble(@WebParam(name = "a") double a, @WebParam(name = "b") double b) {
         return a + b;
     }
 
