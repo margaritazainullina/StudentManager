@@ -40,14 +40,14 @@
                                             <spring:message code="label.groupname" />
                                         </form:label></td>
                                     <td><form:input path="groupName" /></td>
-									<td><span class="error" id="groupnameerror" /></td>
+                                    <td><span class="error" id="groupnameerror" /></td>
                                 </tr> 
                                 <tr>
                                     <td><form:label path="speciality.specialityId">
                                             <spring:message code="label.speciality" />
                                         </form:label></td>
                                     <td><form:input path="speciality.specialityId" /></td>
-									<td><span class="error" id="groupnameerror" /></td>
+                                    <td><span class="error" id="groupnameerror" /></td>
                                 </tr>
 
                                 <tr>

@@ -21,7 +21,7 @@
                     <li><a href="group"><spring:message code="label.groups" /></a></li>
                     <li><a href="speciality"><spring:message code="label.specialities" /></a></li>
                     <li><a href="login.jsp"><spring:message code="label.login" /></a></li>
-                     <li><a href="calc.jsp">Calc</a></li>
+                     <li><a href="service/calc">Calc</a></li>
                     <li><a href="<c:url value="/logout" />">
                             <spring:message code="label.logout" />
                         </a></a></li>

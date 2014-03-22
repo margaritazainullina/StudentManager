@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * <p>Classe Java pour hello complex type.
  * 
- * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * <p>Le fragment de schÃ©ma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="hello">
@@ -34,7 +34,7 @@ public class Hello {
     protected String name;
 
     /**
-     * Obtient la valeur de la propriété name.
+     * Obtient la valeur de la propriÃ©tÃ© name.
      * 
      * @return
      *     possible object is
@@ -46,7 +46,7 @@ public class Hello {
     }
 
     /**
-     * Définit la valeur de la propriété name.
+     * DÃ©finit la valeur de la propriÃ©tÃ© name.
      * 
      * @param value
      *     allowed object is
