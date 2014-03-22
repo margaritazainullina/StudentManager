@@ -30,12 +30,39 @@ public class CalculatorController {
         return "calc";
     }
 
-    @RequestMapping(value = "/add/data", method = RequestMethod.POST)
+    @RequestMapping(value = "/calc", method = RequestMethod.POST, params = {"add"})
     public String addValue(@ModelAttribute("data") Data d,
             BindingResult result) {
-
         d.setResult(s.add(d.getA(), d.getB()));
-
-        return "redirect:/calc";
+        return "calc";
     }
+
+    @RequestMapping(value = "/calc", method = RequestMethod.POST, params = {"minus"})
+    public String minusValue(@ModelAttribute("data") Data d,
+            BindingResult result) {
+        d.setResult(s.minus(d.getA(), d.getB()));
+        return "calc";
+    }
+
+    @RequestMapping(value = "/calc", method = RequestMethod.POST, params = {"multiply"})
+    public String multiplyValue(@ModelAttribute("data") Data d,
+            BindingResult result) {
+        d.setResult(s.multiply(d.getA(), d.getB()));
+        return "calc";
+    }
+
+    @RequestMapping(value = "/calc", method = RequestMethod.POST, params = {"divide"})
+    public String divideValue(@ModelAttribute("data") Data d,
+            BindingResult result) {
+        d.setResult(s.divideDouble(d.getA(), d.getB()));
+        return "calc";
+    }
+
+    @RequestMapping(value = "/calc", method = RequestMethod.POST, params = {"log"})
+    public String logValue(@ModelAttribute("data") Data d,
+            BindingResult result) {
+        d.setResult(s.log(d.getA()));
+        return "calc";
+    }
+
 }

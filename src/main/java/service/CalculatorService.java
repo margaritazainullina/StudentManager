@@ -28,16 +28,16 @@ public class CalculatorService {
 
     @WebMethod(operationName = "multiply")
     public double multiply(@WebParam(name = "a") double a, @WebParam(name = "b") double b) {
-        return a + b;
+        return a * b;
     }
 
     @WebMethod(operationName = "dividedouble")
-    public double dividedouble(@WebParam(name = "a") double a, @WebParam(name = "b") double b) {
-        return a + b;
+    public double divideDouble(@WebParam(name = "a") double a, @WebParam(name = "b") double b) {
+        return a / b;
     }
 
     @WebMethod(operationName = "log")
-    public double divide(@WebParam(name = "a") double a) {
+    public double log(@WebParam(name = "a") double a) {
         return Math.log(a);
     }
 }

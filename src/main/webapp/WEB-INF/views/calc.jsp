@@ -31,18 +31,26 @@
                 <div id="maincolumn">
                     <div class="text">
 
-                        <form:form method="POST" action="add/data" commandName="data" class="form">
+                        <form:form method="POST" action="calc" commandName="data" class="form">
                             <table>
                                 <tr>
-                                    <td><form:input path="a" /></td>
+                                    <td>a&nbsp;=</td>
+                                    <td colspan="3"><form:input path="a" size="30px"/></td>
                                 </tr>
                                 <tr>
-                                    <td><form:input path="b" /></td>
+                                    <td>b&nbsp;=</td>
+                                    <td><form:input path="b"  size="30px"/></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
-                                        <input type="submit" value="add"/>
-                                    </td>
+                                    <td><input type="submit" name="add" value="+" /></td>
+                                    <td><input type="submit" name="minus" value="-" /></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="submit" name="multiply" value="*" /></td>
+                                    <td><input type="submit" name="divide" value="/" /></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="submit" name="multiply" value="log" /></td>                                    
                                 </tr>
 
                             </table>  
