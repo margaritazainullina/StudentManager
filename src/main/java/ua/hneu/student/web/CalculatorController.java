@@ -7,6 +7,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import service.CalculatorService;
 import ua.hneu.student.domain.Data;
 import ua.hneu.student.domain.GroupImpl;
 
@@ -14,40 +16,25 @@ import ua.hneu.student.domain.GroupImpl;
 
 public class CalculatorController {
 
+    Data g = new Data();
+    CalculatorService s = new CalculatorService();
+
     @RequestMapping("/")
     public String home() {
         return "redirect:/calc";
     }
 
     @RequestMapping("/calc")
-    public String listGroups(Map<String, Object> map) {
-
-        Data g = new Data();
+    public String start(Map<String, Object> map) {
         map.put("data", g);
-
         return "calc";
     }
 
-//    @RequestMapping(value = "/calc", method = RequestMethod.GET)
-//    public String printHello(ModelMap model) {
-//        model.addAttribute("message", "Hello Spring MVC Framework!");
-//
-//        return "calc";
-//    }
-    /*@RequestMapping(value = "/add/data", method = RequestMethod.POST)
-    public String addStudent(@ModelAttribute("data") Data d,
-            ModelMap model) {
-        model.addAttribute("a", d.getA());
-        model.addAttribute("b", d.getB());
-
-        return "redirect:/calc";
-    }*/
-
     @RequestMapping(value = "/add/data", method = RequestMethod.POST)
-    public String addSpeciality(@ModelAttribute("data") Data d,
+    public String addValue(@ModelAttribute("data") Data d,
             BindingResult result) {
 
-        d.setA(4);
+        d.setResult(s.add(d.getA(), d.getB()));
 
         return "redirect:/calc";
     }

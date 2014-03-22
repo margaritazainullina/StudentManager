@@ -37,15 +37,19 @@
                                     <td><form:input path="a" /></td>
                                 </tr>
                                 <tr>
+                                    <td><form:input path="b" /></td>
+                                </tr>
+                                <tr>
                                     <td colspan="2">
-                                        <input type="submit" value="Submit"/>
+                                        <input type="submit" value="add"/>
                                     </td>
                                 </tr>
+
                             </table>  
                         </form:form>
 
                         <tr>
-                            <td>${data.a}</td>   
+                            <td>${data.result}</td>   
                         </tr>
                         <br/>                                                
                     </div>

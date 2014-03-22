@@ -24,7 +24,6 @@ C:\proj\ContactManager\src\main\java\ua\hneu\student\domain\Student.java
 C:\proj\ContactManager\src\main\java\ua\hneu\student\service\SpecialityServiceImpl.java
 C:\proj\ContactManager\src\main\java\ua\hneu\student\service\GroupServiceImpl.java
 C:\proj\ContactManager\src\main\java\ua\hneu\student\dao\StudentDAO.java
-C:\proj\ContactManager\src\main\java\ua\hneu\student\aspect\aaa.java
 C:\proj\ContactManager\src\main\java\ua\hneu\student\dao\StudentDAOImpl.java
 C:\proj\ContactManager\src\main\java\ua\hneu\student\domain\Group.java
 C:\proj\ContactManager\target\generated-sources\jaxws-wsimport\service\Hello.java
@@ -32,12 +31,12 @@ C:\proj\ContactManager\src\main\java\ua\hneu\student\service\StudentServiceImpl.
 C:\proj\ContactManager\src\main\java\ua\hneu\student\dao\SpecialityDAOImpl.java
 C:\proj\ContactManager\src\main\java\ua\hneu\student\domain\SpecialityImpl.java
 C:\proj\ContactManager\src\main\java\ua\hneu\student\web\GroupController.java
-C:\proj\ContactManager\src\main\java\ua\hneu\student\aspect\LoggingAspect.java
 C:\proj\ContactManager\src\main\java\ua\hneu\student\domain\Speciality.java
+C:\proj\ContactManager\src\main\java\ua\hneu\student\aspect\LoggingAspect.java
 C:\proj\ContactManager\src\main\java\ua\hneu\student\service\StudentService.java
 C:\proj\ContactManager\src\main\java\ua\hneu\student\domain\StudentImpl.java
 C:\proj\ContactManager\target\generated-sources\jaxws-wsimport\service\HelloResponse.java
-C:\proj\ContactManager\src\main\java\ua\hneu\student\web\SpecialityController.java
 C:\proj\ContactManager\src\main\java\ua\hneu\student\dao\SpecialityDAO.java
+C:\proj\ContactManager\src\main\java\ua\hneu\student\web\SpecialityController.java
 C:\proj\ContactManager\src\main\java\ua\hneu\student\service\GroupService.java
 C:\proj\ContactManager\src\main\java\ua\hneu\student\domain\GroupImpl.java
