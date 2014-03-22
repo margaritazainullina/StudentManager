@@ -31,19 +31,15 @@
                 <div id="maincolumn">
                     <div class="text">
 
-                        <form:form method="POST" action="/service/calc/add">
+                        <form:form method="POST" action="calc/add/data" commandName="data" class="form">
                             <table>
                                 <tr>
-                                    <td><form:label path="A">A</form:label></td>
-                                    <td><form:input path="A" /></td>
+                                   
                                 </tr>
                                 <tr>
-                                    <td><form:label path="A">B</form:label></td>
-                                    <td><form:input path="B" /></td>
-                                </tr>
-                                <td colspan="2">
-                                    <input type="submit" value="Submit"/>
-                                </td>
+                                    <td colspan="2">
+                                        <input type="submit" value="Submit"/>
+                                    </td>
                                 </tr>
                             </table>  
                         </form:form>

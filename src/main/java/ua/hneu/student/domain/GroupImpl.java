@@ -29,10 +29,12 @@ public class GroupImpl implements Group {
     @OneToMany(mappedBy = "group")
     private Set<StudentImpl> student;
 
+    @Override
     public Integer getGroupId() {
         return groupId;
     }
 
+    @Override
     public void setGroupId(Integer groupId) {
         if (groupId == null) {
             throw new IllegalArgumentException();
@@ -41,26 +43,32 @@ public class GroupImpl implements Group {
         }
     }
 
+    @Override
     public String getGroupName() {
         return groupName;
     }
 
+    @Override
     public void setGroupName(String groupName) {
         this.groupName = groupName;
     }
 
+    @Override
     public SpecialityImpl getSpeciality() {
         return speciality;
     }
 
+    @Override
     public void setSpeciality(SpecialityImpl speciality) {
         this.speciality = speciality;
     }
 
+    @Override
     public Set<StudentImpl> getStudent() {
         return student;
     }
 
+    @Override
     public void setStudent(Set<StudentImpl> student) {
         this.student = student;
     }

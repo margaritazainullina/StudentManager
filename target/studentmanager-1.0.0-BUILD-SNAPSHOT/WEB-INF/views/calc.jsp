@@ -31,10 +31,10 @@
                 <div id="maincolumn">
                     <div class="text">
 
-                        <form:form method="POST" action="calc/add/data" commandName="data" class="form">
+                        <form:form method="POST" action="add/data" commandName="data" class="form">
                             <table>
                                 <tr>
-                                   
+                                    <td><form:input path="a" /></td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
@@ -43,6 +43,10 @@
                                 </tr>
                             </table>  
                         </form:form>
+
+                        <tr>
+                            <td>${data.a}</td>   
+                        </tr>
                         <br/>                                                
                     </div>
                 </div>              

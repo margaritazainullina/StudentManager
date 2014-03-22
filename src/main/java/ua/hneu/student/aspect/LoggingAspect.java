@@ -17,13 +17,13 @@ public class LoggingAspect {
 
     //launching setters
     @After("execution(* ua.hneu.student.domain.Group.setGroupId(..))")
-    public void logAroundGroupId(JoinPoint joinPoint) {
+    public void logGroupId(JoinPoint joinPoint) {
         logger.info("Method : " + joinPoint.getSignature().getName() + "(" + Arrays.toString(joinPoint.getArgs()) + ")" + " is launched");
         logger.info("Inserting value GroupId =\"" + joinPoint.getArgs() + "\" to database");
     }
 
     @After("execution(* ua.hneu.student.domain.Speciality.setSpecialityId(..))")
-    public void logAroundSpecialityId(JoinPoint joinPoint) {
+    public void logSpecialityId(JoinPoint joinPoint) {
         logger.info("Method : " + joinPoint.getSignature().getName() + "(" + Arrays.toString(joinPoint.getArgs()) + ")" + " is launched");
         logger.info("Inserting value SpecialityId =\"" + joinPoint.getArgs() + "\" to database");
     }
@@ -40,7 +40,7 @@ public class LoggingAspect {
     @AfterThrowing(
             pointcut = "execution(* ua.hneu.student.domain.Speciality.setSpecialityId(..))",
             throwing = "error")
-    public void loglogAfterThrowingSpecialityId(JoinPoint joinPoint, Throwable error) {
+    public void logAfterThrowingSpecialityId(JoinPoint joinPoint, Throwable error) {
         logger.error("Method : " + joinPoint.getSignature().getName() + "(" + Arrays.toString(joinPoint.getArgs()) + ")" + " is launched");
         logger.error("Exception : " + error);
     }

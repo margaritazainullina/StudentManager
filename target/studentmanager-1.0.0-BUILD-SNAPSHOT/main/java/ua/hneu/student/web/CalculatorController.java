@@ -1,11 +1,8 @@
 package ua.hneu.student.web;
 
-import java.util.Map;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import ua.hneu.student.domain.Data;
@@ -32,7 +29,7 @@ public class CalculatorController {
         model.addAttribute("a", d.getA());
         model.addAttribute("b", d.getB());
 
-        return "calc";
+        return "redirect:/service/calc";
     }
 
 }

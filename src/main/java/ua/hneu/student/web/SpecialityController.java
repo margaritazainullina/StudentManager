@@ -3,6 +3,8 @@ package ua.hneu.student.web;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -16,13 +18,16 @@ import ua.hneu.student.service.SpecialityService;
 @Controller
 public class SpecialityController {
 
+    ApplicationContext appContext = new ClassPathXmlApplicationContext("springAOP.xml");
+
     @Autowired
     private SpecialityService specialityService;
 
     @RequestMapping("/speciality")
     public String listSpecialities(Map<String, Object> map) {
 
-        map.put("speciality", new SpecialityImpl());
+        SpecialityImpl s = (SpecialityImpl) appContext.getBean("speciality");
+        map.put("student", s);
         map.put("specialityList", specialityService.listSpeciality());
 
         return "speciality";
